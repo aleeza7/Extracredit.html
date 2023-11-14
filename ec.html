@@ -1,61 +1,95 @@
 <html> 
-<head>
+    <head> 
+<title> finalGPA Calculator </title>
+<style>
 
-  .inputbutton {
-text-align: center;
-        font-size: 60px;
-  }
+</style>
 
-  .footer {
-text-align: center;
-        font-size: 80px;
+<script> 
+var firstGrade = first
+var ONE = 0
+var secondGrade = second 
+value2 = 0
+var thirdGrade = third 
+value3 = 0
+var fourthGrade = fourthGradeth 
+value4 = 0
+var FifthGrade = fifth 
+value5 = 0
+var finalGPA = 0
+
+
+function secondGrade () { 
+    document.getElementById("second").focus();
+secondGrade = document.getElementById("second").value; 
+if(secondGrade=="A") {document.getElementById("message2").value2 = 4; 
+                     }
+if(secondGrade=="B") {document.getElementById("message2").value2 = 3;
+                     }
+if(secondGrade=="C") {document.getElementById("message2").value2 = 2;
+                     }
+if(secondGrade=="D") {document.getElementById("message2").value2 = 1; 
+                     }
+if(secondGrade=="F") {document.getElementById("message2").value2 = 0;
+                     }
 }
 
-  
-  
 
-  
-<script> 
-var a = 4
-var b = 3
-var c = 2
-var d = 1
-var f = 0
-var avg = 0
-  
-  function averagedOut() { 
-    
 
-  }
+function average () {  
+document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5; 
+finalGPA = (value1+value2+value3+value4+value5)/5;
+if(finalGPA>=3.7) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " |A: High Honor Roll";
+                  } 
+if(finalGPA<3.7 && finalGPA>=3.5) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | A-: Honor Roll"; 
+                                  }
+if(finalGPA<3.5 && finalGPA>=3.3) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | B+";
+                                  } 
+if(finalGPA<3.3 && finalGPA>=2.7) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | B";
+                                  }
+if(finalGPA<2.7 && finalGPA>=2.5){document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | B-";
+                                 } 
+if(finalGPA<2.5 && finalGPA>=2.3){document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | C+";
+                                 } 
+if(finalGPA<2.3 && finalGPA>=1.7){document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | C";
+                                 }
+if(finalGPA<1.7 && finalGPA>=1.5) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | C-";
+                                  } 
+if(finalGPA<1.5 && finalGPA>=1) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | D";
+                                }
+if(finalGPA<1) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + ".0 | F: Academic Probation";
+               }
+}
 
-  
-
+function resetCalculator () { 
+    document.getElementById("first").value = "";
+    document.getElementById("second").value = "";
+    document.getElementById("third").value = "";
+    document.getElementById("fourthGradeth").value = "";
+    document.getElementById("fifth").value = "";
+   
 </script>
 </head>
 
-  <body> 
-    <center>
-<h3> Calculate Your GPA </h3>
-    </center>
+<body> 
+<center> 
+<h1> Input A, B, C, D, or F to calculate your cumalative GPA! </h1>
+</center>
+  
+<center>
+<button id="calculate" onclick="average()"> Final GPA Calculation Here </button> <br> <br> 
+<button id="reset" onclick="resetCalculator()"> Reset All </button>
 
-    <div class = "inputbutton">
-      <button id = "submit">
+</center>
 
-      <input id = "calculate">
-        
-      </button>
-    </div>
+
+
+
+
 
     
-    <p id = "gpaGrade">
-    </p>
 
-      <div class = "footer">
-        <p id = "honorRoll"> 
-        </p>
-      </div>
-    
-  </body>
-
+</body>
 
 </html>
+
